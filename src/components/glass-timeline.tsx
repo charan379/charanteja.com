@@ -54,9 +54,9 @@ const GlassTimeline = React.forwardRef<HTMLDivElement, GlassTimelineProps>(
                     <p className="text-xs text-white/40 mt-1">{item.date}</p>
                   )}
                   {item.description && (
-                    <p className="text-xs text-white/60 mt-2">
+                    <div className="text-xs text-white/60 mt-2">
                       {item.description}
-                    </p>
+                    </div>
                   )}
                 </div>
               </div>
@@ -173,7 +173,7 @@ function GlassTimelineCard({ item }: { item: TimelineItem }) {
           )}
         </div>
         {item.description && (
-          <p className="mt-2 text-sm text-white/60">{item.description}</p>
+          <div className="mt-2 text-sm text-white/60">{item.description}</div>
         )}
       </div>
     </div>
