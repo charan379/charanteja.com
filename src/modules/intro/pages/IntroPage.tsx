@@ -223,8 +223,8 @@ const IntroPage: React.FC = () => {
                   Get In Touch
                 </GlassCardTitle>
                 <GlassCardDescription className="text-xs sm:text-sm text-white/70">
-                  Have a project proposal, engineering leadership role, or
-                  inquiry? Send a direct message below.
+                  Have a project proposal or inquiry? Send a direct message
+                  below.
                 </GlassCardDescription>
               </div>
             </div>
