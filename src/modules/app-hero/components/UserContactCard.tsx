@@ -1,14 +1,5 @@
 import React, { useState } from "react";
-import {
-  Check,
-  Clock,
-  Copy,
-  Globe,
-  Mail,
-  MapPin,
-  Phone,
-  Send,
-} from "lucide-react";
+import { Check, Clock, Copy, Globe, Mail, MapPin, Phone } from "lucide-react";
 import {
   GlassCard,
   GlassCardContent,
@@ -18,6 +9,7 @@ import {
 } from "../../../components/glass-card";
 import { GlassButton } from "../../../components/glass-button";
 import { appConfig } from "../../../config/app-config";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 const iconMap: Record<string, React.FC<{ className?: string }>> = {
   Mail,
@@ -52,7 +44,8 @@ export const UserContactCard: React.FC = () => {
           {contact.title || "Contact Details"}
         </GlassCardTitle>
         <GlassCardDescription className="text-xs text-white/70">
-          {contact.subtitle || "Feel free to reach out for collaborations or inquiries."}
+          {contact.subtitle ||
+            "Feel free to reach out for collaborations or inquiries."}
         </GlassCardDescription>
       </GlassCardHeader>
 
@@ -121,7 +114,7 @@ export const UserContactCard: React.FC = () => {
                 variant="default"
                 className="w-full flex flex-row justify-center items-center text-sm font-semibold cursor-pointer"
               >
-                <Send className="h-4 w-4 mr-1.5 text-emerald-400" />
+                <WhatsAppIcon className="h-4 w-4 mr-1.5 text-stale-100" />
                 Say Hello on WhatsApp
               </GlassButton>
             </a>

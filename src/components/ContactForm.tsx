@@ -249,6 +249,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                         Your Name <span className="text-cyan-400">*</span>
                       </label>
                       <GlassInput
+                        glowOnFocus={false}
                         id={field.name}
                         name={field.name}
                         type="text"
@@ -294,6 +295,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                         Email Address <span className="text-cyan-400">*</span>
                       </label>
                       <GlassInput
+                        glowOnFocus={false}
                         id={field.name}
                         name={field.name}
                         type="email"
@@ -346,6 +348,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                         </span>
                       </label>
                       <GlassInput
+                        glowOnFocus={false}
                         id={field.name}
                         name={field.name}
                         type="tel"
@@ -463,6 +466,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                       Your Message <span className="text-cyan-400">*</span>
                     </label>
                     <GlassTextarea
+                      glowOnFocus={false}
                       id={field.name}
                       name={field.name}
                       placeholder="Tell me about your project, goals, or questions..."
