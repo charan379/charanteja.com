@@ -49,10 +49,10 @@ export const UserContactCard: React.FC = () => {
       {/* Header */}
       <GlassCardHeader className="p-5 pb-3">
         <GlassCardTitle className="font-display text-xl font-bold tracking-tight">
-          {contact.title}
+          {contact.title || "Contact Details"}
         </GlassCardTitle>
         <GlassCardDescription className="text-xs text-white/70">
-          {contact.subtitle}
+          {contact.subtitle || "Feel free to reach out for collaborations or inquiries."}
         </GlassCardDescription>
       </GlassCardHeader>
 
@@ -108,19 +108,21 @@ export const UserContactCard: React.FC = () => {
           );
         })}
 
-        {/* Quick Connect Action */}
+        {/* WhatsApp Action */}
         {whatsapp ? (
           <div className="mt-2 flex justify-center items-center">
             <a
-              href={whatsapp?.href}
+              href={whatsapp.href}
+              target="_blank"
+              rel="noreferrer"
               className="w-full flex justify-center items-center"
             >
               <GlassButton
                 variant="default"
-                className="w-full flex flex-row justify-center items-center text-sm font-semibold"
+                className="w-full flex flex-row justify-center items-center text-sm font-semibold cursor-pointer"
               >
-                <Send className="h-4 w-4 mr-1.5" />
-                Say Hello
+                <Send className="h-4 w-4 mr-1.5 text-emerald-400" />
+                Say Hello on WhatsApp
               </GlassButton>
             </a>
           </div>

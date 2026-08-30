@@ -12,6 +12,7 @@ export const env = createEnv({
     VITE_APP_TITLE: z.string().optional(),
     VITE_BASE_URL: z.string().optional(),
     VITE_GA_MEASUREMENT_ID: z.string().optional(),
+    VITE_FORMSPREE_FORM_ID: z.string().optional(),
   },
 
   runtimeEnv: {
@@ -33,6 +34,12 @@ export const env = createEnv({
         ? import.meta.env.VITE_GA_MEASUREMENT_ID
         : typeof process !== 'undefined'
           ? process.env.VITE_GA_MEASUREMENT_ID
+          : undefined,
+    VITE_FORMSPREE_FORM_ID:
+      typeof import.meta !== 'undefined' && import.meta.env
+        ? import.meta.env.VITE_FORMSPREE_FORM_ID
+        : typeof process !== 'undefined'
+          ? process.env.VITE_FORMSPREE_FORM_ID
           : undefined,
   },
 

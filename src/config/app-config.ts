@@ -487,6 +487,7 @@ export const appConfig: AppConfig = {
   contact: {
     title: "",
     subtitle: "Feel free to reach out for collaborations or inquiries.",
+    formspreeFormId: env.VITE_FORMSPREE_FORM_ID || "",
     details: [
       {
         icon: "Mail",

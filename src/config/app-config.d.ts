@@ -56,6 +56,7 @@ export interface ContactInfoItem {
 export interface ContactConfig {
   title: string;
   subtitle: string;
+  formspreeFormId?: string;
   details: ContactInfoItem[];
 }
 

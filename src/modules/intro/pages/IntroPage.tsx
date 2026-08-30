@@ -1,11 +1,13 @@
 import React from "react";
-import { FileText } from "lucide-react";
+import { FileText, Mail } from "lucide-react";
 import { GlassButton } from "@/components/glass-button";
 import {
   GlassCard,
   GlassCardContent,
+  GlassCardDescription,
   GlassCardFooter,
   GlassCardHeader,
+  GlassCardTitle,
 } from "@/components/glass-card";
 import TypingText from "@/components/TypingText";
 import { appConfig } from "@/config/app-config";
@@ -15,6 +17,7 @@ import {
   GlassAvatarImage,
 } from "@/components/glass-avatar";
 import { LetterFx } from "@/components/LetterFx";
+import { ContactForm } from "@/components/ContactForm";
 import LatestHighlights from "../components/LatestHighlights";
 
 const IntroPage: React.FC = () => {
@@ -95,6 +98,32 @@ const IntroPage: React.FC = () => {
 
       {/* Latest Highlights (Experience, Project, Education) */}
       <LatestHighlights />
+
+      {/* Contact Section Form Card at the end of Intro */}
+      <GlassCard
+        glowEffect={false}
+        className="w-full backdrop-blur border-white/20 p-5 sm:p-6 shadow-2xl"
+      >
+        <GlassCardHeader className="p-0 pb-4">
+          <div className="flex items-center gap-3">
+            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-cyan-500/20 text-cyan-400 border border-cyan-500/30">
+              <Mail className="h-4.5 w-4.5" />
+            </div>
+            <div>
+              <GlassCardTitle className="font-display text-xl font-bold tracking-tight text-white">
+                Get In Touch
+              </GlassCardTitle>
+              <GlassCardDescription className="text-xs text-white/70">
+                Have a project in mind, or a technical inquiry ? Send a direct
+                message below.
+              </GlassCardDescription>
+            </div>
+          </div>
+        </GlassCardHeader>
+        <GlassCardContent className="p-0 pt-3">
+          <ContactForm />
+        </GlassCardContent>
+      </GlassCard>
     </section>
   );
 };
