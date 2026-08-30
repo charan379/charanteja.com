@@ -4,7 +4,7 @@ export type * from "./app-config.d";
 
 export const appConfig: AppConfig = {
   profile: {
-    name: "Charanteja Yandrapati",
+    name: "Charan Teja Yandrapati",
     title: "Web Application Developer",
     avatar: {
       src: "/images/charanteja-yandrapati.jpeg",
