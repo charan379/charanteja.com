@@ -420,7 +420,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                     onValueChange={(val) =>
                       field.handleChange(val as ContactFormData["timeline"])
                     }
-                    className="grid grid-cols-3 gap-2"
+                    className="grid grid-cols-1 md:grid-cols-3 gap-2"
                   >
                     <GlassRadioGroupItem
                       value="asap"
