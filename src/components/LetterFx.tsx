@@ -6,7 +6,7 @@ import React, {
   forwardRef,
   type ReactNode,
 } from "react";
-import classNames from "classnames";
+import { cn } from "@/lib/utils";
 
 const defaultCharset = [
   "X",
@@ -189,7 +189,7 @@ const LetterFx = forwardRef<HTMLSpanElement, LetterFxProps>(
     return (
       <span
         ref={ref}
-        className={classNames(className)}
+        className={cn(className)}
         style={style}
         onMouseOver={
           trigger === "hover" || Boolean(activeInterval)
