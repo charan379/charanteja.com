@@ -39,7 +39,7 @@ export const appConfig: AppConfig = {
       {
         platform: "whatsapp",
         label: "WhatsApp",
-        href: "https://wa.me/919502116185",
+        href: "https://wa.me/916300011849",
         target: "_blank",
       },
       {
@@ -51,12 +51,12 @@ export const appConfig: AppConfig = {
       {
         platform: "phone",
         label: "Phone",
-        href: "tel:+919502116185",
+        href: "tel:+916300011849",
       },
       {
         platform: "email",
         label: "Email",
-        href: "mailto:yandrapaticharanteja@gmail.com",
+        href: "mailto:charantejay1@outlook.com",
       },
     ],
     resume: {
@@ -492,15 +492,15 @@ export const appConfig: AppConfig = {
       {
         icon: "Mail",
         label: "Email",
-        value: "yandrapaticharanteja@gmail.com",
-        href: "mailto:yandrapaticharanteja@gmail.com",
+        value: "charantejay1@outlook.com",
+        href: "mailto:charantejay1@outlook.com",
         copyable: true,
       },
       {
         icon: "Phone",
         label: "Phone",
-        value: "+91 9502116185",
-        href: "tel:+919502116185",
+        value: "+91 6300011849",
+        href: "tel:+916300011849",
         copyable: true,
       },
       {
