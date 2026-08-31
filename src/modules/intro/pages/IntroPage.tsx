@@ -219,11 +219,11 @@ const IntroPage: React.FC = () => {
         >
           <GlassCardHeader className="p-0 pb-4">
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 shadow-[0_0_16px_rgba(6,182,212,0.2)]">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-stale-100 text-stale-400 border border-stale-900 shadow-[0_0_16px_rgba(6,182,212,0.2)]">
                 <Mail className="h-5 w-5" />
               </div>
               <div>
-                <GlassCardTitle className="font-display text-xl sm:text-2xl font-bold tracking-tight text-white">
+                <GlassCardTitle className="font-display tracking-wide text-xl sm:text-2xl font-bold text-white">
                   Get In Touch
                 </GlassCardTitle>
                 <GlassCardDescription className="text-xs sm:text-sm text-white/70">

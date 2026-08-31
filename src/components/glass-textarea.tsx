@@ -1,17 +1,17 @@
-import * as React from "react"
-import { motion } from "framer-motion"
-import { cn } from "@/lib/utils"
+import * as React from "react";
+import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 export interface GlassTextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
-  glowOnFocus?: boolean
-  label?: string
-  error?: string
+  glowOnFocus?: boolean;
+  label?: string;
+  error?: string;
 }
 
 const GlassTextarea = React.forwardRef<HTMLTextAreaElement, GlassTextareaProps>(
   ({ className, glowOnFocus = true, label, error, id, ...props }, ref) => {
-    const textareaId = id || "glass-textarea-id"
-    const errorId = `${textareaId}-error`
+    const textareaId = id || "glass-textarea-id";
+    const errorId = `${textareaId}-error`;
 
     return (
       <div className="relative w-full">
@@ -47,9 +47,10 @@ const GlassTextarea = React.forwardRef<HTMLTextAreaElement, GlassTextareaProps>(
               "shadow-[0_4px_16px_rgba(0,0,0,0.2)]",
               "transition-all duration-300 resize-none",
               "focus:outline-none focus:border-white/40 focus:bg-white/15",
-              "focus:ring-2 focus:ring-cyan-400/30 focus:ring-offset-0",
+              "focus:ring-0.5 focus:ring-stale-400/30 focus:ring-offset-0",
               "disabled:cursor-not-allowed disabled:opacity-50",
-              error && "border-red-400/50 focus:border-red-400/70 focus:ring-red-400/30",
+              error &&
+                "border-red-400/50 focus:border-red-400/70 focus:ring-red-400/30",
               className,
             )}
             ref={ref}
@@ -71,9 +72,9 @@ const GlassTextarea = React.forwardRef<HTMLTextAreaElement, GlassTextareaProps>(
           </motion.p>
         )}
       </div>
-    )
+    );
   },
-)
-GlassTextarea.displayName = "GlassTextarea"
+);
+GlassTextarea.displayName = "GlassTextarea";
 
-export { GlassTextarea }
+export { GlassTextarea };

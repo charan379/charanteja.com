@@ -245,8 +245,8 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                         htmlFor={field.name}
                         className="flex items-center gap-1.5 text-xs font-medium text-white/80"
                       >
-                        <User className="h-3.5 w-3.5 text-cyan-400" />
-                        Your Name <span className="text-cyan-400">*</span>
+                        <User className="h-3.5 w-3.5 text-stale-400" />
+                        Your Name <span className="text-stale-400">*</span>
                       </label>
                       <GlassInput
                         glowOnFocus={false}
@@ -291,8 +291,8 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                         htmlFor={field.name}
                         className="flex items-center gap-1.5 text-xs font-medium text-white/80"
                       >
-                        <Mail className="h-3.5 w-3.5 text-cyan-400" />
-                        Email Address <span className="text-cyan-400">*</span>
+                        <Mail className="h-3.5 w-3.5 text-stale-400" />
+                        Email Address <span className="text-stale-400">*</span>
                       </label>
                       <GlassInput
                         glowOnFocus={false}
@@ -341,7 +341,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                         htmlFor={field.name}
                         className="flex items-center gap-1.5 text-xs font-medium text-white/80"
                       >
-                        <Phone className="h-3.5 w-3.5 text-cyan-400" />
+                        <Phone className="h-3.5 w-3.5 text-stale-400" />
                         Mobile / Phone{" "}
                         <span className="text-white/40 text-[10px]">
                           (Optional)
@@ -373,7 +373,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                 {(field) => (
                   <div className="flex flex-col gap-1.5">
                     <label className="flex items-center gap-1.5 text-xs font-medium text-white/80">
-                      <MonitorCog className="h-3.5 w-3.5 text-cyan-400" />
+                      <MonitorCog className="h-3.5 w-3.5 text-stale-400" />
                       Subject / Service
                     </label>
                     <GlassSelect
@@ -462,8 +462,8 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                       htmlFor={field.name}
                       className="flex items-center gap-1.5 text-xs font-medium text-white/80"
                     >
-                      <MessageSquare className="h-3.5 w-3.5 text-cyan-400" />
-                      Your Message <span className="text-cyan-400">*</span>
+                      <MessageSquare className="h-3.5 w-3.5 text-stale-400" />
+                      Your Message <span className="text-stale-400">*</span>
                     </label>
                     <GlassTextarea
                       glowOnFocus={false}

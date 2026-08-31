@@ -41,16 +41,16 @@ export const LatestHighlights: React.FC = () => {
         <section className="flex flex-col gap-3">
           <div className="flex items-center justify-between px-1">
             <div className="flex items-center gap-2">
-              <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-cyan-500/20 border border-cyan-400/30 text-cyan-300">
+              <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-stale-500/20 border border-stale-400/30 text-stale-300">
                 <BriefcaseBusiness className="h-3.5 w-3.5" />
               </div>
-              <h2 className="text-lg font-bold font-display text-white">
+              <h2 className="text-lg font-bold tracking-wide font-display text-white">
                 Currently Working At
               </h2>
             </div>
             <Link
               to="/work"
-              className="inline-flex items-center gap-1 text-xs font-mono text-cyan-300 hover:text-cyan-200 transition-colors group"
+              className="inline-flex items-center gap-1 text-xs font-mono text-stale-300 hover:text-stale-200 transition-colors group"
             >
               <span>View All</span>
               <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
@@ -64,22 +64,22 @@ export const LatestHighlights: React.FC = () => {
             <GlassCardContent className="flex flex-col gap-3 p-0">
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <div>
-                  <h3 className="text-base font-bold font-display text-white">
+                  <h3 className="text-base font-bold font-display text-white tracking-wide">
                     {latestExperience.company}
                   </h3>
                   <div className="flex flex-wrap items-center gap-2 mt-1">
-                    <span className="font-semibold text-xs text-cyan-300 font-display">
+                    <span className="font-semibold text-xs text-stale-300 font-display">
                       {latestExperience.role}
                     </span>
                     {latestExperience.employmentType && (
-                      <span className="inline-flex items-center gap-1 rounded-md border border-white/10 bg-white/5 px-2 py-0.5 text-[10px] font-mono text-purple-300">
+                      <span className="inline-flex items-center gap-1 rounded-md border border-white/10 bg-white/5 px-2 py-0.5 text-[10px] font-mono text-purple-100">
                         <Building2 className="h-2.5 w-2.5" />
                         {latestExperience.employmentType}
                       </span>
                     )}
                     {latestExperience.location && (
                       <span className="inline-flex items-center gap-1 text-[10px] text-white/60 font-sans">
-                        <MapPin className="h-2.5 w-2.5 text-cyan-400 shrink-0" />
+                        <MapPin className="h-2.5 w-2.5 text-stale-400 shrink-0" />
                         {latestExperience.location}
                       </span>
                     )}
@@ -108,7 +108,7 @@ export const LatestHighlights: React.FC = () => {
                     key={idx}
                     className="flex items-start gap-2 text-xs text-white/75 leading-relaxed"
                   >
-                    <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-cyan-400" />
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-100" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -117,7 +117,7 @@ export const LatestHighlights: React.FC = () => {
               {/* Technologies */}
               {latestExperience.technologies && (
                 <div className="flex flex-wrap items-center gap-1.5 pt-2 border-t border-white/10 mt-1">
-                  <Code2 className="h-3 w-3 text-purple-400 mr-0.5 shrink-0" />
+                  <Code2 className="h-3 w-3 text-stale-100 mr-0.5 shrink-0" />
                   {latestExperience.technologies.slice(0, 6).map((tech) => (
                     <span
                       key={tech}
@@ -143,16 +143,16 @@ export const LatestHighlights: React.FC = () => {
         <section className="flex flex-col gap-3">
           <div className="flex items-center justify-between px-1">
             <div className="flex items-center gap-2">
-              <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-cyan-500/20 border border-cyan-400/30 text-cyan-300">
+              <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-stale-500/20 border border-stale-400/30 text-stale-300">
                 <FolderGit2 className="h-3.5 w-3.5" />
               </div>
-              <h2 className="text-lg font-bold font-display text-white">
+              <h2 className="text-lg font-bold tracking-wide font-display text-white">
                 Latest Project
               </h2>
             </div>
             <Link
               to="/projects"
-              className="inline-flex items-center gap-1 text-xs font-mono text-cyan-300 hover:text-cyan-200 transition-colors group"
+              className="inline-flex items-center gap-1 text-xs font-mono text-stale-300 hover:text-stale-200 transition-colors group"
             >
               <span>View All</span>
               <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
@@ -170,16 +170,16 @@ export const LatestHighlights: React.FC = () => {
         <section className="flex flex-col gap-3">
           <div className="flex items-center justify-between px-1">
             <div className="flex items-center gap-2">
-              <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-cyan-500/20 border border-cyan-400/30 text-cyan-300">
+              <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-stale-500/20 border border-stale-400/30 text-stale-300">
                 <GraduationCap className="h-3.5 w-3.5" />
               </div>
-              <h2 className="text-lg font-bold font-display text-white">
+              <h2 className="text-lg font-bold tracking-wide font-display text-white">
                 Latest Education & Certifications
               </h2>
             </div>
             <Link
               to="/education"
-              className="inline-flex items-center gap-1 text-xs font-mono text-cyan-300 hover:text-cyan-200 transition-colors group"
+              className="inline-flex items-center gap-1 text-xs font-mono text-stale-300 hover:text-stale-200 transition-colors group"
             >
               <span>View All</span>
               <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
@@ -188,11 +188,14 @@ export const LatestHighlights: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Degree Card */}
-            <GlassCard glowEffect={false} className="w-full backdrop-blur border-white/20 p-5">
+            <GlassCard
+              glowEffect={false}
+              className="w-full backdrop-blur border-white/20 p-5"
+            >
               <GlassCardContent className="flex flex-col justify-between h-full gap-3 p-0">
                 <div>
                   <div className="flex items-center justify-between gap-2">
-                    <span className="text-[11px] font-mono text-cyan-300">
+                    <span className="text-[11px] font-mono text-stale-300">
                       {latestStudy.timeframe}
                     </span>
                     {latestStudy.status && (
@@ -229,7 +232,7 @@ export const LatestHighlights: React.FC = () => {
                 <div className="flex flex-col justify-between h-full p-5 gap-3">
                   <div>
                     <div className="flex items-center justify-between gap-2">
-                      <span className="text-[11px] font-mono text-cyan-300">
+                      <span className="text-[11px] font-mono text-stale-300">
                         {latestCert.issuedOn}
                       </span>
                       <GlassBadge
