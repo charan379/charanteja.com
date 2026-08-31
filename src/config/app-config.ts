@@ -76,12 +76,12 @@ export const appConfig: AppConfig = {
     ],
     letterFx: {
       words: [
-        "Charan Teja .Y",
+        "Charan Teja Yandrapati",
         "Web Application Dev.",
         "Creative Web & UI Designer.",
       ],
       intervalMs: 5000,
-      speed: "medium",
+      speed: "slow",
     },
   },
   education: {
