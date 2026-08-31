@@ -42,121 +42,160 @@ function RootNotFound() {
 }
 
 export const Route = createRootRouteWithContext<MyRouterContext>()({
-  head: () => ({
-    meta: [
-      {
-        charSet: "utf-8",
-      },
-      {
-        name: "viewport",
-        content: "width=device-width, initial-scale=1",
-      },
-      {
-        title: appConfig.seo.defaultTitle,
-      },
-      {
-        name: "description",
-        content: appConfig.seo.defaultDescription,
-      },
-      {
-        name: "keywords",
-        content: appConfig.seo.defaultKeywords.join(", "),
-      },
-      {
-        name: "author",
-        content: appConfig.seo.author,
-      },
-      {
-        name: "robots",
-        content: appConfig.seo.robots.index
-          ? "index, follow"
-          : "noindex, nofollow",
-      },
-      {
-        name: "googlebot",
-        content: appConfig.seo.robots.googleBot || "index, follow",
-      },
-      {
-        property: "og:type",
-        content: "website",
-      },
-      {
-        property: "og:site_name",
-        content: appConfig.seo.siteName,
-      },
-      {
-        property: "og:locale",
-        content: appConfig.seo.locale,
-      },
-      {
-        property: "og:url",
-        content: appConfig.seo.baseUrl,
-      },
-      {
-        property: "og:title",
-        content: appConfig.seo.defaultTitle,
-      },
-      {
-        property: "og:description",
-        content: appConfig.seo.defaultDescription,
-      },
-      {
-        property: "og:image",
-        content: appConfig.seo.ogImage,
-      },
-      {
-        property: "og:image:width",
-        content: "1200",
-      },
-      {
-        property: "og:image:height",
-        content: "630",
-      },
-      {
-        name: "twitter:card",
-        content: "summary_large_image",
-      },
-      {
-        name: "twitter:creator",
-        content: appConfig.seo.twitterHandle || "",
-      },
-      {
-        name: "twitter:title",
-        content: appConfig.seo.defaultTitle,
-      },
-      {
-        name: "twitter:description",
-        content: appConfig.seo.defaultDescription,
-      },
-      {
-        name: "twitter:image",
-        content: appConfig.seo.ogImage,
-      },
-    ],
-    links: [
-      ...(appConfig.seo.baseUrl
-        ? [
-            {
-              rel: "canonical",
-              href: appConfig.seo.baseUrl,
-            },
-          ]
-        : []),
-      {
-        rel: "icon",
-        href: "/favicon.ico",
-        type: "image/x-icon",
-      },
-      {
-        rel: "shortcut icon",
-        href: "/favicon.ico",
-      },
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
-    ],
-  }),
+  head: () => {
+    const baseUrl = (appConfig.seo.baseUrl || "https://www.charanteja.com").replace(/\/$/, "");
+    const ogRelative = appConfig.seo.ogImage || "/og";
+    const ogAbsolute = ogRelative.startsWith("http")
+      ? ogRelative
+      : `${baseUrl}${ogRelative.startsWith("/") ? "" : "/"}${ogRelative}`;
+    const rasterFallback = `${baseUrl}/images/charanteja-yandrapati.jpeg`;
+
+    return {
+      meta: [
+        {
+          charSet: "utf-8",
+        },
+        {
+          name: "viewport",
+          content: "width=device-width, initial-scale=1",
+        },
+        {
+          title: appConfig.seo.defaultTitle,
+        },
+        {
+          name: "description",
+          content: appConfig.seo.defaultDescription,
+        },
+        {
+          name: "keywords",
+          content: appConfig.seo.defaultKeywords.join(", "),
+        },
+        {
+          name: "author",
+          content: appConfig.seo.author,
+        },
+        {
+          name: "robots",
+          content: appConfig.seo.robots.index
+            ? "index, follow"
+            : "noindex, nofollow",
+        },
+        {
+          name: "googlebot",
+          content: appConfig.seo.robots.googleBot || "index, follow",
+        },
+        {
+          property: "og:type",
+          content: "website",
+        },
+        {
+          property: "og:site_name",
+          content: appConfig.seo.siteName,
+        },
+        {
+          property: "og:locale",
+          content: appConfig.seo.locale,
+        },
+        {
+          property: "og:url",
+          content: baseUrl,
+        },
+        {
+          property: "og:title",
+          content: appConfig.seo.defaultTitle,
+        },
+        {
+          property: "og:description",
+          content: appConfig.seo.defaultDescription,
+        },
+        // Primary OG Image
+        {
+          property: "og:image",
+          content: ogAbsolute,
+        },
+        {
+          property: "og:image:secure_url",
+          content: ogAbsolute,
+        },
+        {
+          property: "og:image:width",
+          content: "1200",
+        },
+        {
+          property: "og:image:height",
+          content: "630",
+        },
+        {
+          property: "og:image:alt",
+          content: appConfig.seo.defaultTitle,
+        },
+        // WhatsApp & Raster Scraper Fallback Image
+        {
+          property: "og:image",
+          content: rasterFallback,
+        },
+        {
+          property: "og:image:secure_url",
+          content: rasterFallback,
+        },
+        {
+          property: "og:image:type",
+          content: "image/jpeg",
+        },
+        {
+          property: "og:image:width",
+          content: "1200",
+        },
+        {
+          property: "og:image:height",
+          content: "630",
+        },
+        {
+          name: "twitter:card",
+          content: "summary_large_image",
+        },
+        {
+          name: "twitter:creator",
+          content: appConfig.seo.twitterHandle || "",
+        },
+        {
+          name: "twitter:title",
+          content: appConfig.seo.defaultTitle,
+        },
+        {
+          name: "twitter:description",
+          content: appConfig.seo.defaultDescription,
+        },
+        {
+          name: "twitter:image",
+          content: ogAbsolute,
+        },
+      ],
+      links: [
+        {
+          rel: "canonical",
+          href: baseUrl,
+        },
+        {
+          rel: "image_src",
+          href: rasterFallback,
+        },
+        {
+          rel: "icon",
+          href: "/favicon.ico",
+          type: "image/x-icon",
+        },
+        {
+          rel: "shortcut icon",
+          href: "/favicon.ico",
+        },
+        {
+          rel: "stylesheet",
+          href: appCss,
+        },
+      ],
+    };
+  },
   notFoundComponent: RootNotFound,
   shellComponent: RootDocument,
 });
