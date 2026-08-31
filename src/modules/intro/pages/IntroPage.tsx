@@ -19,6 +19,7 @@ import {
 import { LetterFx } from "@/components/LetterFx";
 import { ContactForm } from "@/components/ContactForm";
 import LatestHighlights from "../components/LatestHighlights";
+import AppHero from "@/modules/app-hero/components/AppHero";
 
 const IntroPage: React.FC = () => {
   const avatar = appConfig.profile.avatar2 || appConfig.profile.avatar;
@@ -38,6 +39,9 @@ const IntroPage: React.FC = () => {
 
   return (
     <section id="intro" className="w-full flex flex-col gap-8">
+      <section className="h-auto w-full block lg:hidden lg:h-full">
+        <AppHero />
+      </section>
       {/* Enhanced Hero Glass Card */}
       <GlassCard
         className="relative w-full overflow-hidden backdrop-blur border-white/20 shadow-2xl p-6 sm:p-8"
@@ -171,7 +175,7 @@ const IntroPage: React.FC = () => {
               onClick={scrollToContact}
               className="flex items-center gap-2 cursor-pointer"
             >
-              <Send className="h-3.5 w-3.5 text-cyan-400" />
+              <Send className="h-3.5 w-3.5 text-stale-100" />
               Get In Touch
             </GlassButton>
           </div>

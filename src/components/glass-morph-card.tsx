@@ -60,7 +60,7 @@ const GlassMorphCard = React.forwardRef<HTMLDivElement, GlassMorphCardProps>(
         {/* Glow effect */}
         <div
           className={cn(
-            "absolute -inset-2 rounded-2xl bg-linear-to-r blur-xl transition-opacity duration-300",
+            "absolute inset-10 rounded-2xl bg-linear-to-r blur-xl transition-opacity duration-300",
             glowColors[glowColor],
             isHovered ? "opacity-80" : "opacity-40",
           )}

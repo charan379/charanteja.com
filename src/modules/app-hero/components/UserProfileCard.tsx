@@ -62,7 +62,7 @@ const UserProfileCard: React.FC = () => {
   return (
     <GlassCard
       glowEffect={false}
-      className="relative mt-18 w-full backdrop-blur shadow-2xl"
+      className="relative w-full backdrop-blur shadow-2xl"
     >
       {/* Avatar */}
       <GlassAvatar className="absolute -top-30 left-1/2 h-36 w-36 -translate-x-1/2 z-10 shadow-2xl ring-4 ring-white/20">

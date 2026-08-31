@@ -177,7 +177,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.3 }}
-            className="flex flex-col items-center justify-center text-center p-8 rounded-2xl border border-emerald-500/30 bg-transparent backdrop-blur-xs gap-4"
+            className="flex flex-col items-center justify-center text-center p-8 rounded-2xl border border-emerald-500/30 bg-transparent backdrop-blur gap-4"
           >
             <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-500/50 text-emerald-400 border border-emerald-500/50 shadow-[0_0_24px_rgba(16,185,129,0.3)]">
               <CheckCircle2 className="h-7 w-7" />

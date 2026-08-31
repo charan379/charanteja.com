@@ -188,7 +188,7 @@ export const LatestHighlights: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Degree Card */}
-            <GlassCard className="w-full backdrop-blur-xs border-white/20 p-5">
+            <GlassCard glowEffect={false} className="w-full backdrop-blur border-white/20 p-5">
               <GlassCardContent className="flex flex-col justify-between h-full gap-3 p-0">
                 <div>
                   <div className="flex items-center justify-between gap-2">
