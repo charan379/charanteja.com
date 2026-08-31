@@ -58,7 +58,7 @@ const IntroPage: React.FC = () => {
               <span className="font-mono text-xs uppercase tracking-widest text-cyan-400 font-semibold">
                 Hello, I am
               </span>
-              <h1 className="font-display text-2xl sm:text-2xl font-extrabold tracking-tight text-white leading-tight">
+              <h1 className="font-display text-base sm:text-xl md:text-2xl font-extrabold tracking-normal text-white leading-tight">
                 <LetterFx
                   words={appConfig.intro.letterFx.words}
                   intervalMs={appConfig.intro.letterFx.intervalMs}
