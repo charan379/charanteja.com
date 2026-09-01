@@ -27,7 +27,7 @@ export const ExperienceTimeline: React.FC = () => {
     description: (
       <div className="flex flex-col gap-3 text-xs text-white/80 mt-1">
         {/* Role, Employment Type & Location */}
-        <div className="flex flex-row flex-wrap items-center justify-between gap-2">
+        <div className="flex flex-row flex-wrap items-center justify-start gap-2">
           <span className="text-sm text-cyan-100 font-display">{exp.role}</span>
 
           {exp.employmentType && (
@@ -43,16 +43,16 @@ export const ExperienceTimeline: React.FC = () => {
               {exp.location}
             </span>
           )}
-
-          {exp.status === "current" && (
-            <GlassBadge
-              variant="primary"
-              className="text-[10px] font-mono uppercase px-2 py-0.5 animate-pulse ml-auto"
-            >
-              Current Role
-            </GlassBadge>
-          )}
         </div>
+
+        {exp.status === "current" && (
+          <GlassBadge
+            variant="primary"
+            className="text-[10px] font-mono uppercase px-2 py-0.5 animate-pulse max-w-max"
+          >
+            Current Role
+          </GlassBadge>
+        )}
 
         {/* Bullet Achievements */}
         <ul className="flex flex-col gap-2 list-none pl-0 font-sans">

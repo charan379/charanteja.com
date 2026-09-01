@@ -41,7 +41,7 @@ export const LatestHighlights: React.FC = () => {
         <section className="flex flex-col gap-3">
           <div className="flex items-center justify-between px-1">
             <div className="flex items-center gap-2">
-              <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-stale-500/20 border border-stale-400/30 text-stale-300">
+              <div className="flex min-h-7 min-w-7 items-center justify-center rounded-lg bg-stale-500/20 border border-stale-400/30 text-stale-300">
                 <BriefcaseBusiness className="h-3.5 w-3.5" />
               </div>
               <h2 className="text-lg font-bold tracking-wide font-display text-white">
@@ -86,7 +86,7 @@ export const LatestHighlights: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="flex flex-col items-end gap-1">
+                <div className="flex flex-col items-start sm:items-end gap-1">
                   <span className="text-[11px] font-mono text-white/60">
                     {latestExperience.timeframe}
                   </span>
@@ -143,7 +143,7 @@ export const LatestHighlights: React.FC = () => {
         <section className="flex flex-col gap-3">
           <div className="flex items-center justify-between px-1">
             <div className="flex items-center gap-2">
-              <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-stale-500/20 border border-stale-400/30 text-stale-300">
+              <div className="flex min-h-7 min-w-7 items-center justify-center rounded-lg bg-stale-500/20 border border-stale-400/30 text-stale-300">
                 <FolderGit2 className="h-3.5 w-3.5" />
               </div>
               <h2 className="text-lg font-bold tracking-wide font-display text-white">
@@ -170,7 +170,7 @@ export const LatestHighlights: React.FC = () => {
         <section className="flex flex-col gap-3">
           <div className="flex items-center justify-between px-1">
             <div className="flex items-center gap-2">
-              <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-stale-500/20 border border-stale-400/30 text-stale-300">
+              <div className="flex min-h-7 min-w-7 items-center justify-center rounded-lg bg-stale-500/20 border border-stale-400/30 text-stale-300">
                 <GraduationCap className="h-3.5 w-3.5" />
               </div>
               <h2 className="text-lg font-bold tracking-wide font-display text-white">

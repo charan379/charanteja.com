@@ -219,7 +219,7 @@ const IntroPage: React.FC = () => {
         >
           <GlassCardHeader className="p-0 pb-4">
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-stale-100 text-stale-400 border border-stale-900 shadow-[0_0_16px_rgba(6,182,212,0.2)]">
+              <div className="flex min-h-10 min-w-10 items-center justify-center rounded-xl bg-stale-100 text-stale-400 border border-stale-900 shadow-[0_0_16px_rgba(6,182,212,0.2)]">
                 <Mail className="h-5 w-5" />
               </div>
               <div>
