@@ -154,7 +154,7 @@ const IntroPage: React.FC = () => {
             {appConfig.profile.resume && (
               <a
                 href={appConfig.profile.resume.href}
-                download={appConfig.profile.resume.download ? true : undefined}
+                download={appConfig.profile.resume.download ? true : false}
                 target="_blank"
                 rel="noreferrer"
               >

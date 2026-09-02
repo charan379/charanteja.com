@@ -61,8 +61,8 @@ export const appConfig: AppConfig = {
     ],
     resume: {
       label: "Download CV",
-      href: "/resume/Charanteja_yandrapati_resume.pdf",
-      download: true,
+      href: "/resume/Charanteja_Yandrapati_web_developer_resume.pdf",
+      download: false,
     },
   },
   intro: {
