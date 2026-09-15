@@ -632,13 +632,7 @@ export const appConfig: AppConfig = {
       type: "video",
       src: "/vedios/video1.mp4",
       poster:
-        "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=2564&auto=format&fit=crop",
-    },
-    {
-      id: "flowers",
-      type: "image",
-      src: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=2564&auto=format&fit=crop",
-      alt: "Flowers",
+        "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=80&w=2564&auto=format&fit=crop",
     },
     {
       id: "orange-mountains",
@@ -647,11 +641,23 @@ export const appConfig: AppConfig = {
       alt: "Orange Mountains",
     },
     {
-      id: "gradient-flow",
+      id: "computer-cyber-punk",
       type: "image",
       src: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2564&auto=format&fit=crop",
       alt: "Vibrant Gradient Glow",
     },
+    {
+      id: "space-stars",
+      type: "image",
+      scr: "https://images.unsplash.com/photo-1464802686167-b939a6910659?q=80&w=2564&auto=format&fit=crop",
+      alt: "space stars",
+    },
+    {
+      id: "space-orange-stars",
+      type: "image",
+      scr: "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?q=80&w=2564&auto=format&fit=crop",
+      alt: "space  orange stars",
+    }
   ],
   backgroundSettings: {
     imageIntervalMs: 8000, // 8 seconds for images
